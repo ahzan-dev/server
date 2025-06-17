@@ -1,0 +1,393 @@
+[
+  {
+    "id": "brand_001",
+    "name": "McDonald's",
+    "logoUrl": "https://example.com/logos/mcdonalds.png",
+    "coverPhotosUrls": [
+      "https://example.com/covers/mcdonalds1.jpg",
+      "https://example.com/covers/mcdonalds2.jpg",
+      "https://example.com/covers/mcdonalds3.jpg"
+    ],
+    "isVerified": true,
+    "category": "RESTAURANT",
+    "tag": "Fast Food",
+    "canFollow": true,
+    "followerCount": 15420,
+    "branchCount": 8,
+    "brandUrlSlug": "mcdonalds",
+    "about": "Global fast food icon serving burgers, fries, and more. Founded in 1940, McDonald's has grown to become one of the world's largest restaurant chains, known for quality, service, cleanliness, and value.",
+    "joinedDate": "2023-06-11T00:00:00.000Z",
+    "contactDetails": {
+      "phoneNumber": "+94112345678",
+      "website": "https://www.mcdonalds.lk",
+      "whatsapp": "+94712345678",
+      "email": "contact@mcdonalds.lk"
+    },
+    "openingHours": {
+      "id": "hours_001",
+      "isSameAllDays": false,
+      "weeklyHours": [
+        { "id": "day_001", "weekday": "MONDAY", "isClosed": false, "openingTime": "08:00", "closingTime": "23:00" },
+        { "id": "day_002", "weekday": "TUESDAY", "isClosed": false, "openingTime": "08:00", "closingTime": "23:00" },
+        { "id": "day_003", "weekday": "WEDNESDAY", "isClosed": false, "openingTime": "08:00", "closingTime": "23:00" },
+        { "id": "day_004", "weekday": "THURSDAY", "isClosed": false, "openingTime": "08:00", "closingTime": "23:00" },
+        { "id": "day_005", "weekday": "FRIDAY", "isClosed": false, "openingTime": "08:00", "closingTime": "23:00" },
+        { "id": "day_006", "weekday": "SATURDAY", "isClosed": false, "openingTime": "08:00", "closingTime": "18:00" },
+        { "id": "day_007", "weekday": "SUNDAY", "isClosed": true }
+      ]
+    },
+    "branches": [
+      {
+        "id": "branch_001",
+        "name": "Kalutara",
+        "address": "123, Main St, Kalutara",
+        "distance": "~2.5Km away",
+        "imageUrl": "https://example.com/branches/kalutara.jpg",
+        "mapLink": "https://maps.google.com/?q=kalutara+mcdonalds",
+        "openingHours": {
+          "id": "hours_002",
+          "isSameAllDays": true,
+          "openingTime": "08:00",
+          "closingTime": "22:00"
+        }
+      },
+      {
+        "id": "branch_002",
+        "name": "Dehiwala",
+        "address": "456, Beach Rd, Dehiwala",
+        "distance": "~7.0Km away",
+        "imageUrl": "https://example.com/branches/dehiwala.jpg",
+        "mapLink": "https://maps.google.com/?q=dehiwala+mcdonalds",
+        "openingHours": {
+          "id": "hours_003",
+          "isSameAllDays": false,
+          "weeklyHours": [
+            { "id": "day_008", "weekday": "MONDAY", "isClosed": false, "openingTime": "09:00", "closingTime": "21:00" },
+            { "id": "day_009", "weekday": "TUESDAY", "isClosed": false, "openingTime": "09:00", "closingTime": "21:00" },
+            { "id": "day_010", "weekday": "WEDNESDAY", "isClosed": false, "openingTime": "09:00", "closingTime": "21:00" },
+            { "id": "day_011", "weekday": "THURSDAY", "isClosed": false, "openingTime": "09:00", "closingTime": "21:00" },
+            { "id": "day_012", "weekday": "FRIDAY", "isClosed": false, "openingTime": "09:00", "closingTime": "22:00" },
+            { "id": "day_013", "weekday": "SATURDAY", "isClosed": false, "openingTime": "09:00", "closingTime": "18:00" },
+            { "id": "day_014", "weekday": "SUNDAY", "isClosed": true }
+          ]
+        }
+      },
+      {
+        "id": "branch_003",
+        "name": "Colombo City Centre",
+        "address": "137, Sir James Pieris Mawatha, Colombo 2",
+        "distance": "~12.0Km away",
+        "imageUrl": "https://example.com/branches/ccc.jpg",
+        "mapLink": "https://maps.google.com/?q=colombo+city+centre+mcdonalds"
+      }
+    ],
+    "menus": [
+      {
+        "id": "menu_001",
+        "menuName": "Regular Menu",
+        "validUntil": "2025-12-31T00:00:00.000Z",
+        "imageUrl": "https://example.com/menus/regular.jpg"
+      },
+      {
+        "id": "menu_002",
+        "menuName": "Breakfast Menu",
+        "validUntil": "2025-12-31T00:00:00.000Z",
+        "imageUrl": "https://example.com/menus/breakfast.jpg"
+      }
+    ],
+    "popularDeals": [
+      {
+        "id": "deal_001",
+        "dealName": "30% off on your Big Mac Family Dinner",
+        "endsIn": "2d 15h",
+        "price": "1580",
+        "imageUrl": "https://example.com/deals/bigmac.jpg",
+        "likes": 245
+      },
+      {
+        "id": "deal_002",
+        "dealName": "Buy One Cheese Burger And Get One Free!",
+        "price": "756",
+        "imageUrl": "https://example.com/deals/cheeseburger.jpg",
+        "likes": 189
+      },
+      {
+        "id": "deal_003",
+        "dealName": "McFlurry Special - 25% Off",
+        "endsIn": "5d 8h",
+        "price": "425",
+        "imageUrl": "https://example.com/deals/mcflurry.jpg",
+        "likes": 156
+      }
+    ],
+    "createdAt": "2023-06-11T10:30:00.000Z",
+    "updatedAt": "2024-12-15T14:22:00.000Z"
+  },
+  {
+    "id": "brand_002",
+    "name": "KFC",
+    "logoUrl": "https://example.com/logos/kfc.png",
+    "coverPhotosUrls": [
+      "https://example.com/covers/kfc1.jpg",
+      "https://example.com/covers/kfc2.jpg"
+    ],
+    "isVerified": true,
+    "category": "RESTAURANT",
+    "tag": "Fried Chicken",
+    "canFollow": true,
+    "followerCount": 12890,
+    "branchCount": 6,
+    "brandUrlSlug": "kfc",
+    "about": "Kentucky Fried Chicken, known worldwide for our Original Recipe fried chicken with 11 herbs and spices. Finger lickin' good since 1952.",
+    "joinedDate": "2023-08-20T00:00:00.000Z",
+    "contactDetails": {
+      "phoneNumber": "+94112567890",
+      "website": "https://www.kfc.lk",
+      "whatsapp": "+94712567890",
+      "email": "info@kfc.lk"
+    },
+    "openingHours": {
+      "id": "hours_004",
+      "isSameAllDays": true,
+      "openingTime": "10:00",
+      "closingTime": "22:00"
+    },
+    "branches": [
+      {
+        "id": "branch_004",
+        "name": "Nugegoda",
+        "address": "High Level Rd, Nugegoda",
+        "distance": "~5.2Km away",
+        "imageUrl": "https://example.com/branches/nugegoda-kfc.jpg",
+        "mapLink": "https://maps.google.com/?q=nugegoda+kfc"
+      },
+      {
+        "id": "branch_005",
+        "name": "Kandy City Center",
+        "address": "5, Dalada Veediya, Kandy",
+        "distance": "~115Km away",
+        "imageUrl": "https://example.com/branches/kandy-kfc.jpg",
+        "mapLink": "https://maps.google.com/?q=kandy+kfc"
+      }
+    ],
+    "menus": [
+      {
+        "id": "menu_003",
+        "menuName": "Original Recipe Menu",
+        "imageUrl": "https://example.com/menus/kfc-original.jpg"
+      }
+    ],
+    "popularDeals": [
+      {
+        "id": "deal_004",
+        "dealName": "Family Feast - 8 pieces + 2 sides",
+        "endsIn": "3d 10h",
+        "price": "2850",
+        "imageUrl": "https://example.com/deals/family-feast.jpg",
+        "likes": 312
+      },
+      {
+        "id": "deal_005",
+        "dealName": "Zinger Burger Combo",
+        "price": "1250",
+        "imageUrl": "https://example.com/deals/zinger.jpg",
+        "likes": 198
+      }
+    ],
+    "createdAt": "2023-08-20T09:15:00.000Z",
+    "updatedAt": "2024-12-14T16:45:00.000Z"
+  },
+  {
+    "id": "brand_003",
+    "name": "Starbucks",
+    "logoUrl": "https://example.com/logos/starbucks.png",
+    "coverPhotosUrls": [
+      "https://example.com/covers/starbucks1.jpg",
+      "https://example.com/covers/starbucks2.jpg",
+      "https://example.com/covers/starbucks3.jpg"
+    ],
+    "isVerified": true,
+    "category": "RESTAURANT",
+    "tag": "Coffee",
+    "canFollow": true,
+    "followerCount": 8750,
+    "branchCount": 4,
+    "brandUrlSlug": "starbucks",
+    "about": "Premium coffee experience with handcrafted beverages, fresh food, and a welcoming atmosphere. Your neighborhood gathering place.",
+    "joinedDate": "2023-09-15T00:00:00.000Z",
+    "contactDetails": {
+      "phoneNumber": "+94113456789",
+      "website": "https://www.starbucks.lk",
+      "email": "hello@starbucks.lk"
+    },
+    "openingHours": {
+      "id": "hours_005",
+      "isSameAllDays": false,
+      "weeklyHours": [
+        { "id": "day_015", "weekday": "MONDAY", "isClosed": false, "openingTime": "07:00", "closingTime": "22:00" },
+        { "id": "day_016", "weekday": "TUESDAY", "isClosed": false, "openingTime": "07:00", "closingTime": "22:00" },
+        { "id": "day_017", "weekday": "WEDNESDAY", "isClosed": false, "openingTime": "07:00", "closingTime": "22:00" },
+        { "id": "day_018", "weekday": "THURSDAY", "isClosed": false, "openingTime": "07:00", "closingTime": "22:00" },
+        { "id": "day_019", "weekday": "FRIDAY", "isClosed": false, "openingTime": "07:00", "closingTime": "23:00" },
+        { "id": "day_020", "weekday": "SATURDAY", "isClosed": false, "openingTime": "08:00", "closingTime": "23:00" },
+        { "id": "day_021", "weekday": "SUNDAY", "isClosed": false, "openingTime": "08:00", "closingTime": "21:00" }
+      ]
+    },
+    "branches": [
+      {
+        "id": "branch_006",
+        "name": "Colombo 03",
+        "address": "Liberty Plaza, R. A. De Mel Mawatha, Colombo 3",
+        "distance": "~8.5Km away",
+        "imageUrl": "https://example.com/branches/liberty-starbucks.jpg",
+        "mapLink": "https://maps.google.com/?q=liberty+plaza+starbucks"
+      }
+    ],
+    "menus": [
+      {
+        "id": "menu_004",
+        "menuName": "Beverages & Food",
+        "imageUrl": "https://example.com/menus/starbucks-menu.jpg"
+      }
+    ],
+    "popularDeals": [
+      {
+        "id": "deal_006",
+        "dealName": "Buy 2 Grande Drinks, Get 1 Free Pastry",
+        "endsIn": "1d 5h",
+        "price": "1950",
+        "imageUrl": "https://example.com/deals/starbucks-combo.jpg",
+        "likes": 127
+      }
+    ],
+    "createdAt": "2023-09-15T11:20:00.000Z",
+    "updatedAt": "2024-12-13T08:30:00.000Z"
+  },
+  {
+    "id": "brand_004",
+    "name": "Odel",
+    "logoUrl": "https://example.com/logos/odel.png",
+    "coverPhotosUrls": [
+      "https://example.com/covers/odel1.jpg",
+      "https://example.com/covers/odel2.jpg"
+    ],
+    "isVerified": true,
+    "category": "RETAIL",
+    "tag": "Fashion & Lifestyle",
+    "canFollow": true,
+    "followerCount": 22150,
+    "branchCount": 5,
+    "brandUrlSlug": "odel",
+    "about": "Sri Lanka's premier fashion and lifestyle destination. Offering the latest in fashion, home decor, and lifestyle products from international and local brands.",
+    "joinedDate": "2023-07-10T00:00:00.000Z",
+    "contactDetails": {
+      "phoneNumber": "+94112678901",
+      "website": "https://www.odel.lk",
+      "whatsapp": "+94772678901",
+      "email": "customercare@odel.lk"
+    },
+    "openingHours": {
+      "id": "hours_006",
+      "isSameAllDays": true,
+      "openingTime": "10:00",
+      "closingTime": "20:00"
+    },
+    "branches": [
+      {
+        "id": "branch_007",
+        "name": "Alexandra Place",
+        "address": "Alexandra Place, De Fonseka Place, Colombo 5",
+        "distance": "~6.8Km away",
+        "imageUrl": "https://example.com/branches/alexandra-odel.jpg",
+        "mapLink": "https://maps.google.com/?q=alexandra+place+odel"
+      },
+      {
+        "id": "branch_008",
+        "name": "One Galle Face",
+        "address": "One Galle Face Mall, Colombo 2",
+        "distance": "~10.2Km away",
+        "imageUrl": "https://example.com/branches/ogf-odel.jpg",
+        "mapLink": "https://maps.google.com/?q=one+galle+face+odel"
+      }
+    ],
+    "menus": [],
+    "popularDeals": [
+      {
+        "id": "deal_007",
+        "dealName": "End of Season Sale - Up to 70% Off",
+        "endsIn": "7d 20h",
+        "price": "Starting from LKR 500",
+        "imageUrl": "https://example.com/deals/odel-sale.jpg",
+        "likes": 445
+      },
+      {
+        "id": "deal_008",
+        "dealName": "Buy 2 Get 1 Free on Selected Items",
+        "endsIn": "4d 12h",
+        "price": "Varies",
+        "imageUrl": "https://example.com/deals/odel-b2g1.jpg",
+        "likes": 298
+      }
+    ],
+    "createdAt": "2023-07-10T14:45:00.000Z",
+    "updatedAt": "2024-12-16T10:15:00.000Z"
+  },
+  {
+    "id": "brand_005",
+    "name": "HealthGuard Pharmacy",
+    "logoUrl": "https://example.com/logos/healthguard.png",
+    "coverPhotosUrls": [
+      "https://example.com/covers/healthguard1.jpg"
+    ],
+    "isVerified": false,
+    "category": "HEALTHCARE",
+    "tag": "Pharmacy",
+    "canFollow": true,
+    "followerCount": 1250,
+    "branchCount": 3,
+    "brandUrlSlug": "healthguard-pharmacy",
+    "about": "Your trusted neighborhood pharmacy providing quality healthcare products, prescription medicines, and wellness solutions with expert pharmaceutical care.",
+    "joinedDate": "2024-01-20T00:00:00.000Z",
+    "contactDetails": {
+      "phoneNumber": "+94114567890",
+      "website": "https://www.healthguard.lk",
+      "email": "info@healthguard.lk"
+    },
+    "openingHours": {
+      "id": "hours_007",
+      "isSameAllDays": false,
+      "weeklyHours": [
+        { "id": "day_022", "weekday": "MONDAY", "isClosed": false, "openingTime": "08:00", "closingTime": "20:00" },
+        { "id": "day_023", "weekday": "TUESDAY", "isClosed": false, "openingTime": "08:00", "closingTime": "20:00" },
+        { "id": "day_024", "weekday": "WEDNESDAY", "isClosed": false, "openingTime": "08:00", "closingTime": "20:00" },
+        { "id": "day_025", "weekday": "THURSDAY", "isClosed": false, "openingTime": "08:00", "closingTime": "20:00" },
+        { "id": "day_026", "weekday": "FRIDAY", "isClosed": false, "openingTime": "08:00", "closingTime": "20:00" },
+        { "id": "day_027", "weekday": "SATURDAY", "isClosed": false, "openingTime": "08:00", "closingTime": "18:00" },
+        { "id": "day_028", "weekday": "SUNDAY", "isClosed": false, "openingTime": "09:00", "closingTime": "17:00" }
+      ]
+    },
+    "branches": [
+      {
+        "id": "branch_009",
+        "name": "Maharagama",
+        "address": "Old Kesbewa Road, Maharagama",
+        "distance": "~3.2Km away",
+        "imageUrl": "https://example.com/branches/maharagama-hg.jpg",
+        "mapLink": "https://maps.google.com/?q=maharagama+healthguard"
+      }
+    ],
+    "menus": [],
+    "popularDeals": [
+      {
+        "id": "deal_009",
+        "dealName": "Free Health Checkup with Medicine Purchase",
+        "endsIn": "15d 10h",
+        "price": "Free",
+        "imageUrl": "https://example.com/deals/health-checkup.jpg",
+        "likes": 67
+      }
+    ],
+    "createdAt": "2024-01-20T09:30:00.000Z",
+    "updatedAt": "2024-12-10T15:20:00.000Z"
+  }
+]

@@ -1,0 +1,168 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Enums
+enum BrandCategory {
+  RESTAURANT
+  RETAIL
+  HOTEL
+  HEALTHCARE
+  AUTOMOTIVE
+  EDUCATION
+  ENTERTAINMENT
+  FITNESS
+  BEAUTY
+  TECHNOLOGY
+  OTHER
+}
+
+enum Weekday {
+  MONDAY
+  TUESDAY
+  WEDNESDAY
+  THURSDAY
+  FRIDAY
+  SATURDAY
+  SUNDAY
+}
+
+// Main Brand Profile Model
+model Brand {
+  id              String        @id @default(cuid())
+  name            String
+  logoUrl         String
+  coverPhotosUrls String // JSON string for SQLite compatibility
+  isVerified      Boolean       @default(false)
+  category        BrandCategory
+  tag             String?
+  canFollow       Boolean       @default(true)
+  followerCount   Int           @default(0)
+  branchCount     Int           @default(0)
+  brandUrlSlug    String        @unique
+  about           String
+  joinedDate      DateTime      @default(now())
+
+  // Contact Details (embedded)
+  phoneNumber String?
+  website     String?
+  whatsapp    String?
+  email       String?
+
+  // Relations
+  openingHours OpeningHours?
+  branches     Branch[]
+  menus        Menu[]
+  popularDeals PopularDeal[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("brands")
+}
+
+// Branch Model
+model Branch {
+  id       String  @id @default(cuid())
+  name     String
+  address  String
+  distance String?
+  imageUrl String?
+  mapLink  String?
+
+  // Relations
+  brand        Brand         @relation(fields: [brandId], references: [id], onDelete: Cascade)
+  brandId      String
+  openingHours OpeningHours?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("branches")
+}
+
+// Menu Model
+model Menu {
+  id         String    @id @default(cuid())
+  menuName   String
+  validUntil DateTime?
+  imageUrl   String?
+
+  // Relations
+  brand   Brand  @relation(fields: [brandId], references: [id], onDelete: Cascade)
+  brandId String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("menus")
+}
+
+// Popular Deal Model
+model PopularDeal {
+  id       String  @id @default(cuid())
+  dealName String
+  endsIn   String?
+  price    String
+  imageUrl String?
+  likes    Int     @default(0)
+
+  // Relations
+  brand   Brand  @relation(fields: [brandId], references: [id], onDelete: Cascade)
+  brandId String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("popular_deals")
+}
+
+// Opening Hours Model (flexible structure)
+model OpeningHours {
+  id            String  @id @default(cuid())
+  isSameAllDays Boolean @default(false)
+  openingTime   String? // HH:mm format, used when isSameAllDays is true
+  closingTime   String? // HH:mm format, used when isSameAllDays is true
+
+  // Relations
+  brand       Brand?     @relation(fields: [brandId], references: [id], onDelete: Cascade)
+  brandId     String?    @unique
+  branch      Branch?    @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  branchId    String?    @unique
+  weeklyHours DayHours[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("opening_hours")
+}
+
+// Day Hours Model (for detailed weekly hours)
+model DayHours {
+  id          String  @id @default(cuid())
+  weekday     Weekday
+  isClosed    Boolean @default(false)
+  openingTime String? // HH:mm format
+  closingTime String? // HH:mm format
+
+  // Relations
+  openingHours   OpeningHours @relation(fields: [openingHoursId], references: [id], onDelete: Cascade)
+  openingHoursId String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([openingHoursId, weekday])
+  @@map("day_hours")
+}
